@@ -1,0 +1,10 @@
+[package]
+authors = ["Brandon Dyer"]
+description = "A video decoding library for Rust"
+edition = "2021"
+license = "Apache-2.0"
+name = "pc_video"
+readme = "README.md"
+version = "0.1.0"
+
+[dependencies]
