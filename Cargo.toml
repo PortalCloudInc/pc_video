@@ -1,10 +1,26 @@
 [package]
 authors = ["Brandon Dyer"]
-description = "A video decoding library for Rust"
+description = "A video encoding/decoding library for Rust"
 edition = "2021"
 license = "Apache-2.0"
 name = "pc_video"
 readme = "README.md"
 version = "0.1.0"
 
+[features]
+default = ["encode", "decode", "ffmpeg", "openh264"]
+
+decode = []
+encode = []
+ffmpeg = ["dep:ffmpeg-next"]
+openh264 = ["dep:openh264"]
+
 [dependencies]
+
+[dependencies.openh264]
+optional = true
+version = "0.3"
+
+[dependencies.ffmpeg-next]
+optional = true
+version = "5.1"
